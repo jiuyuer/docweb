@@ -1,23 +1,25 @@
+<style>
+  .doc-content {
+    background: #ececec;
+  }
+</style>
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div class="doc-content" v-cloak>
+    <v-header></v-header>
     <router-view></router-view>
+    <v-footer></v-footer>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import header from '../src/components/header/header'
+  import footer from '../src/components/footer/footer'
+
+  export default {
+    components: {
+      'v-header': header,
+      'v-footer': footer
+    }
+  }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

@@ -1,0 +1,50 @@
+{
+  "subNav": {
+    "docName":"文档标题",
+    "id":"docName",
+    "items": [
+      {
+        "name": "一级导航1",
+        "id": "nav1",
+        "child": true,
+        "items":[
+          {
+            "name": "二级导航1",
+            "id": "sec1",
+            "child": true,
+            "items":[
+              {
+                "name": "三级导航1",
+                "id": "third1"
+              },
+              {
+                "name": "三级导航2",
+                "id": "third2"
+              }
+            ]
+          },
+          {
+            "name": "二级导航2",
+            "id": "sec2",
+            "child": false
+          },
+          {
+            "name": "二级导航3",
+            "id": "sec3",
+            "child": false
+          }
+        ]
+      },
+      {
+        "name": "一级导航2",
+        "id": "nav2",
+        "child": false
+      },
+      {
+        "name": "一级导航3",
+        "id": "nav3",
+        "child": false
+      }
+    ]
+  }
+}
