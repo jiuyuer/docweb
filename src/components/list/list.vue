@@ -113,11 +113,11 @@
     created () {
       var _this = this
       $.ajax({
-        type: 'GET',
+        type: 'get',
         dataType: 'json',
         url: 'static/data/data.json',
         success: function (res) {
-          _this.apiList = $.extend([], res.data)
+          _this.apiList = $.extend([], res.docList)
         }
       })
     },
