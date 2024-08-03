@@ -298,7 +298,7 @@
         }, function () {
           if (subsubindex || subsubindex === 0) {
             _this.navData.items[index].items[subindex].items.splice(subsubindex, 1)
-            console.log(_this.navData.items[index].items[subindex].items.length)
+            //console.log(_this.navData.items[index].items[subindex].items.length)
             if(_this.navData.items[index].items[subindex].items.length == 0){
               _this.navData.items[index].items[subindex].child = false;
             }
@@ -323,14 +323,13 @@
         })
       },
       sureAdd (obj) {
-        var _this = this
-        var _navData = _this.navData.items
+        var _this = this;
+        var _navData = _this.navData.items;
+        var newObj = {};
+        newObj.name = obj.name;
+        newObj.id = Math.floor(Math.random() * 100) + 'id';
         if (obj.name === '') {
           return
-        }
-        var newObj = {
-          name: obj.name,
-          id: Math.floor(Math.random() * 100) + 'id'
         }
         $.each(_navData, function (index, value) {
           if (value.id === obj.id) {
@@ -347,11 +346,11 @@
             })
           }
         })
-        _this.navData = $.extend({}, _this.navData)
-        $('#contentModal').modal('hide')
+        _this.navData = $.extend({}, _this.navData);
+        $('#contentModal').modal('hide');
         _this.$nextTick(function () {
           if (!$('#' + obj.id).closest('li').hasClass('open')) {
-            _this.showChild(obj.id)
+            _this.showChild(obj.id);
           }
         })
       },
